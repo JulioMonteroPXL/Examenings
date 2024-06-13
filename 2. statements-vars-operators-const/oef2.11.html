@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Voorbeelden</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Voorbeelden van verschillende operatoren
+            let a = 10;
+            let b = 3;
+
+            // Rekenkundige operatoren
+            let optelling = a + b;
+            let aftrekking = a - b;
+            let vermenigvuldiging = a * b;
+            let deling = a / b;
+            let modulo = a % b;
+
+            // Toewijzingsoperatoren
+            let toewijzing = a;
+            toewijzing += b; // is gelijk aan toewijzing = toewijzing + b
+
+            // Vergelijkingsoperatoren
+            let gelijk = (a == b);
+            let nietGelijk = (a != b);
+            let groterDan = (a > b);
+            let kleinerDan = (a < b);
+            let groterDanOfGelijkAan = (a >= b);
+            let kleinerDanOfGelijkAan = (a <= b);
+
+            // Logische operatoren
+            let en = (a > 5 && b < 5);
+            let of = (a > 5 || b > 5);
+            let niet = !(a < 5);
+
+            // Toon de resultaten in een tabel
+            let resultaten = [
+                { uitleg: "Optelling van a en b", operator: "+", resultaat: optelling },
+                { uitleg: "Aftrekking van a en b", operator: "-", resultaat: aftrekking },
+                { uitleg: "Vermenigvuldiging van a en b", operator: "*", resultaat: vermenigvuldiging },
+                { uitleg: "Delen van a door b", operator: "/", resultaat: deling },
+                { uitleg: "Modulo van a en b", operator: "%", resultaat: modulo },
+                { uitleg: "Toewijzing (a += b)", operator: "+=", resultaat: toewijzing },
+                { uitleg: "Gelijk aan (a == b)", operator: "==", resultaat: gelijk },
+                { uitleg: "Niet gelijk aan (a != b)", operator: "!=", resultaat: nietGelijk },
+                { uitleg: "Groter dan (a > b)", operator: ">", resultaat: groterDan },
+                { uitleg: "Kleiner dan (a < b)", operator: "<", resultaat: kleinerDan },
+                { uitleg: "Groter dan of gelijk aan (a >= b)", operator: ">=", resultaat: groterDanOfGelijkAan },
+                { uitleg: "Kleiner dan of gelijk aan (a <= b)", operator: "<=", resultaat: kleinerDanOfGelijkAan },
+                { uitleg: "En (a > 5 && b < 5)", operator: "&&", resultaat: en },
+                { uitleg: "Of (a > 5 || b > 5)", operator: "||", resultaat: of },
+                { uitleg: "Niet (!(a < 5))", operator: "!", resultaat: niet },
+            ];
+
+            let tabel = document.getElementById("resultaten-tabel");
+            resultaten.forEach(resultaat => {
+                let rij = tabel.insertRow();
+                rij.insertCell(0).textContent = resultaat.uitleg;
+                rij.insertCell(1).textContent = resultaat.operator;
+                rij.insertCell(2).textContent = resultaat.resultaat;
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>Voorbeelden van Operatoren</h1>
+<table id="resultaten-tabel">
+    <thead>
+    <tr>
+        <th>Uitleg</th>
+        <th>Operator</th>
+        <th>Resultaat</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</body>
+</html>
