@@ -1,0 +1,59 @@
+
+
+
+$primaire-kleur: #ff0000;
+$secundaire-kleur: #CCCCCC;
+$zwarte-kleur: #000000;
+$witte-kleur:#FFFFFF;
+$font-xl: 6rem;
+$font-lg: 4rem;
+$font-md: 2rem;
+$font-sm: 1rem;
+
+
+body {
+  background-color: $secundaire-kleur;
+}
+
+h1 {
+  color: $primaire-kleur;
+  font-weight: bold;
+  font-size: $font-lg ;
+}
+
+h2{
+  font-size: $font-md;
+}
+nav{
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+      display: inline-block;
+      a{
+        display: block;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+
+        a:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@mixin overlay() {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  position: absolute;
+}
+
+.model-background {
+  @include overlay();
+  background-color: $zwarte-kleur;
+  opacity: 0.9;
+}
