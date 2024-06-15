@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+}
+#delivery {
+    max-width: 75rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    margin: 0 auto;
+}
+#delivery p {
+    color: #111111;
+}
+#delivery p b {
+    color: #E40515;
+}
+nav {
+    background-color: #111111;
+}
+nav #nav__container {
+    max-width: 75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+nav #nav__container h1 {
+    color: #FFFFFF;
+    font-size: 3rem;
+    font-family: 'Saira', sans-serif;
+}
+nav #nav__container h1 i {
+    color: #E40515;
+}
+nav #nav__container ul {
+    display: flex;
+    list-style-type: none;
+}
+nav #nav__container ul li {
+    padding-left: 25px;
+    font-size: 1.5rem;
+}
+nav #nav__container ul li a {
+    color: #ffffff;
+}
+nav #nav__container ul li a:hover {
+    color: #E40515;
+}
+header {
+    background-image: url("assets/road.jpg");
+    background-position: top;
+    background-size: cover;
+}
+header h1 {
+    color: #111111;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem;
+    font-size: 5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+header h2 {
+    color: #E40515;
+    background-color: rgba(255, 255, 255, 0.7);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+}
+header #header__container  {
+    max-width: 75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10rem 0;
+    margin: 0 auto;
+}
+main {
+    max-width: 75rem;
+    padding: 4rem 0;
+    margin: 0 auto;
+}
+main h1 {
+    color: #E40515;
+    margin: 2rem 0;
+}
+main h2 {
+    margin: 1rem 0;
+    color: #FFFFFF;
+    background-color: #111111;
+    padding: 1rem;
+    border: 2px solid #111111;
+}
+main h2:hover {
+    border: 2px solid #111111;
+    color: #111111;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+main h3 {
+    padding: 0.5rem;
+    margin: 1rem;
+    text-align: center;
+    color: #FFFFFF;
+    background-color: #111111;
+    border: 2px solid #111111;
+}
+main h3:hover {
+    border: 2px solid #111111;
+    color: #111111;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+main img:hover {
+    cursor: pointer;
+}
+main #main__container1 article {
+    display: flex;
+    margin-bottom: 3rem;
+}
+main #main__container1 article img {
+    margin: 1rem;
+}
+main #main__container1 article ul {
+    list-style-position: inside;
+    margin: 1rem;
+}
+main #main__container1 article ul li {
+    padding: 0.5rem;
+    font-weight: 700;
+}
+main #main__container2 article {
+    display: flex;
+}
+main #main__container2 article img {
+    margin: 5%;
+    width: 90%;
+}
+footer {
+    background-color: #111111;
+}
+footer h1 {
+    color: #E40515;
+    margin: 2rem 0;
+}
+footer p {
+    color: #FFFFFF;
+    margin: 0.5rem 0;
+}
+footer a {
+    color: #FFFFFF;
+}
+footer #footer__container {
+    max-width: 75rem;
+    padding: 2rem 0;
+    margin: 0 auto;
+    display: flex;
+}
+footer #footer__container #footer__container__map {
+    flex: auto;
+}
+footer #footer__container #footer__container__address {
+    flex: auto;
+    text-align: right;
+}
+#top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+#top a {
+    background-color: #E40515;
+    color: #FFFFFF;
+    padding: 1rem 1.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: inline-block;
+    border: 2px solid #E40515;
+}
+#top a:hover {
+    background-color: #FFFFFF;
+    color: #E40515;
+    border: 2px solid #E40515;
+}
+@media screen and (max-width: 77rem) {
+    #delivery, header, nav,main, footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+@media screen and (max-width: 55rem) {
+    #delivery {
+        display: none;
+    }
+    header h1 {
+        font-size: 3rem;
+    }
+    header h2 {
+        font-size: 1rem;
+    }
+    main h1 {
+        text-align: center;
+    }
+    main #main__container1 article {
+        display: flex;
+        flex-direction: column;
+    }
+    main #main__container1 article img {
+        width: 60%;
+        margin: 1rem auto;
+        order: 2;
+    }
+    main #main__container2 article {
+        flex-direction: column;
+    }
+    main #main__container2 article img {
+        width: 60%;
+        display: block;
+        margin: 1rem auto;
+    }
+    footer #footer__container {
+        flex-direction: column;
+    }
+    footer #footer__container #footer__container__address {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 38rem) {
+    nav #nav__container h1 {
+        font-size: 2rem;
+    }
+    nav #nav__container ul {
+        display: none;
+    }
+    header #header__container {
+        padding: 4rem 0;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    main {
+        padding: 1rem 2rem;
+    }
+}
