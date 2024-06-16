@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>symmetrische driehoek</title>
+</head>
+<body>
+<script>
+    function printSymmetricalTriangle(rows) {
+        for (let i = 1; i <= rows; i++) {
+            let spaces = ' '.repeat(rows - i);
+            let hashes = '#'.repeat(2 * i - 1);
+            console.log(spaces + hashes + spaces);
+        }
+    }
+
+    // Call the function with the desired number of rows
+    printSymmetricalTriangle(7);
+</script>
+</body>
+</html>

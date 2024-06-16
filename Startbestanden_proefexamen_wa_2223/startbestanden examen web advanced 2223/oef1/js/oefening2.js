@@ -89,3 +89,36 @@ function nameAndCitySortedByAge() {
 }
 
 console.log(nameAndCitySortedByAge());
+
+function subjectCount() {
+    const subjectMap = {};
+
+    students.forEach(student => {
+        student.subjects.forEach(subject => {
+            if (subjectMap[subject]) {
+                subjectMap[subject]++;
+            } else {
+                subjectMap[subject] = 1;
+            }
+        });
+    });
+
+    return Object.keys(subjectMap).map(subject => ({
+        subject: subject,
+        count: subjectMap[subject]
+    }));
+}
+
+console.log(subjectCount());
+
+function getStudentByGradeAndNameLength() {
+    const highesGradeStudent = students.reduce((max, student) => student.grade > max.grade ? student : max);
+    const index = highesGradeStudent.name.length;
+
+    if (index < students.length ) {
+        return students[index];
+    }
+    return highesGradeStudent;
+}
+
+console.log(getStudentByGradeAndNameLength());
