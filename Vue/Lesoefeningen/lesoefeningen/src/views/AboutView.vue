@@ -53,7 +53,9 @@ export default {
   .about {
     min-height: 100vh;
     display: flex;
+    justify-content: center; /* Center horizontally */
     align-items: center;
+    flex-direction: column; /* Align buttons and counter vertically */
   }
 }
 
@@ -66,5 +68,14 @@ export default {
   margin: 5px;
   font-size: 16px;
   cursor: pointer;
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add some rounding */
+  background-color: #42b983; /* Vue.js green */
+  color: white;
+}
+
+.button:disabled, .button-:disabled {
+  background-color: #cccccc; /* Light gray for disabled state */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
 }
 </style>
