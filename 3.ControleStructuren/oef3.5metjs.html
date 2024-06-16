@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Checker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h2>Random Number Checker</h2>
+            <p id="randomNumber"></p>
+            <p id="message" class="font-weight-bold"></p>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+
+<!-- External JS File -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Generate a random number between 0 and 100
+        const randomNumber = Math.floor(Math.random() * 101);
+        const messageElement = document.getElementById('message');
+        let userGuess = null;
+
+        // Loop until the user guesses the correct number
+        while (userGuess !== randomNumber) {
+            userGuess = parseInt(prompt('Guess the number between 0 and 100:'), 10);
+
+            // Check if the user input is a valid number
+            if (isNaN(userGuess)) {
+                alert('Please enter a valid number.');
+                continue;
+            }
+
+            // Determine the message based on the user's guess
+            if (userGuess < randomNumber) {
+                alert('Te laag');
+                messageElement.textContent = 'Te laag';
+                messageElement.className = 'font-weight-bold text-danger';
+            } else if (userGuess > randomNumber) {
+                alert('Te hoog');
+                messageElement.textContent = 'Te hoog';
+                messageElement.className = 'font-weight-bold text-warning';
+            } else {
+                alert('Proficiat, goed gegokt');
+                messageElement.textContent = 'Proficiat, goed gegokt';
+                messageElement.className = 'font-weight-bold text-success';
+            }
+        }
+    });
+</script>
+</body>
+</html>

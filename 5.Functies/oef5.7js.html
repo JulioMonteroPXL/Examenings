@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitalize Words</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .font-weight-bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Capitalized Sentence</h2>
+    <p id="capitalizedSentence" class="font-weight-bold"></p>
+</div>
+
+<!-- External JS File -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sentence = 'Deze oefeningen zijn héél leuk.';
+        const capitalizedSentenceElement = document.getElementById('capitalizedSentence');
+
+        function alleWoordenStartenMetHoofdletter(sentence) {
+            const words = sentence.split(' ');
+            for (let i = 0; i < words.length; i++) {
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+            }
+            return words.join(' ');
+        }
+
+        const capitalizedSentence = alleWoordenStartenMetHoofdletter(sentence);
+        capitalizedSentenceElement.textContent = capitalizedSentence;
+    });
+
+</script>
+</body>
+</html>

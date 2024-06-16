@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Message</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h2>Welcome Message</h2>
+            <p id="welcomeMessage" class="font-weight-bold"></p>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const welcomeMessageElement = document.getElementById('welcomeMessage');
+        const now = new Date();
+        const hours = now.getHours();
+        let message = '';
+
+        if (hours >= 7 && hours < 12) {
+            message = 'Goedemorgen';
+        } else if (hours >= 12 && hours < 18) {
+            message = 'Goede dag';
+        } else {
+            message = 'Goede avond';
+        }
+
+        welcomeMessageElement.textContent = `${message}, welkom op onze website!`;
+    });
+</script>
+</body>
+</html>
